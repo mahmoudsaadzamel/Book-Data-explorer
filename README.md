@@ -34,7 +34,7 @@ The interface is built with Streamlit for a clean, user-friendly experience.
    streamlit run main.py
    ```
 
-## 🔎 Scraper (optional, local-only)
+# 🔎 Scraper (optional, local-only)
 
 This repo includes scraper.py to fetch a demo dataset from Books to Scrape (https://books.toscrape.com/
 ).
@@ -49,7 +49,7 @@ python3 scraper.py
 If your version of scraper.py supports flags, you can export to a custom location:
 python3 scraper.py --out data/books.csv
 
-# What it writes 
+What it writes 
 
 When available, the CSV includes columns like:
 title, category, price, rating, description
@@ -57,13 +57,13 @@ availability_text, availability_n, in_stock
 product_url, image_url, upc
 desc_word_count
 
-# Use the scraped file in the app
+Use the scraped file in the app
 
 - Replace the committed books.csv with your new one or
 
 - Keep the default and upload a different CSV from the UI
 
-# Please be polite: throttle requests and respect robots.txt. This is an educational demo.  
+**Please be polite:** throttle requests and respect robots.txt. This is an educational demo.  
 
 ### Hugging Face Spaces Deployment
 
