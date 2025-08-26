@@ -34,7 +34,7 @@ The interface is built with Streamlit for a clean, user-friendly experience.
    streamlit run main.py
    ```
 
-# 🔎 Scraper (optional, local-only)
+**🔎 Scraper (optional, local-only)**
 
 This repo includes scraper.py to fetch a demo dataset from Books to Scrape (https://books.toscrape.com/
 ).
@@ -65,6 +65,7 @@ Use the scraped file in the app
 - Keep the default and upload a different CSV from the UI
 
 **Please be polite:** throttle requests and respect robots.txt. This is an educational demo.  
+
 
 ### Hugging Face Spaces Deployment
 
