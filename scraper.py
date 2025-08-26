@@ -1,6 +1,4 @@
-# scraper.py
 from __future__ import annotations
-
 import csv
 import re
 import time
@@ -67,7 +65,7 @@ def product_links_from_listing(listing_url: str) -> List[str]:
     links = []
     for a in soup.select("article.product_pod h3 a"):
         href = a.get("href")
-        # BooksToScrape mixes relative paths; ensure /catalogue/ is present
+       
         abs_url = urljoin(listing_url, href)
         if "/catalogue/" not in abs_url:
             abs_url = urljoin(BASE, f"catalogue/{href}")
@@ -91,7 +89,7 @@ def parse_book_page(url: str, category: str) -> Book:
     rating_word = next((cls for cls in rating_el.get("class", []) if cls in RATING_MAP), "One")
     rating = RATING_MAP[rating_word]
 
-    # description appears after the #product_description header (if present)
+   
     desc = ""
     hdr = soup.select_one("#product_description")
     if hdr:
@@ -100,7 +98,7 @@ def parse_book_page(url: str, category: str) -> Book:
             desc = p.get_text(" ", strip=True)
     desc_word_count = len(desc.split())
 
-    # UPC from the product info table
+   
     upc = ""
     for row in soup.select("table.table.table-striped tr"):
         th = row.select_one("th")
